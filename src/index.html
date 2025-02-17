@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Martin Miroslavov Dimitrov</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Menú de navegación -->
+    <div class="menu">
+      <button class="menu-button">Menú</button>
+      <div class="menu-content">
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#projects">Proyects</a>
+        <a href="#contact">Contacts</a>
+      </div>
+    </div>
+
+    <!-- Menú de idiomas -->
+    <div class="menuIdiomas">
+      <button class="menu-button">Language</button>
+      <div class="menu-content">
+        <a href="#" onclick="setLanguage('es')">Español</a>
+        <a href="#" onclick="setLanguage('en')">English</a>
+        <a href="#" onclick="setLanguage('fr')">Français</a>
+        <a href="#" onclick="setLanguage('it')">Italiano</a>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <header id="home">
+        <img
+          src="https://pachashop.com/cdn/shop/files/ADHESIVO-REDONDO-8-5CM_1.jpg?v=1725027931"
+          alt="Foto de Martin"
+          class="profile-pic"
+        />
+        <h1 id="name">Martin Miroslavov Dimitrov</h1>
+        <p id="job">
+          Programador Mobile | Técnico de Redes | Diseñador UI/UX | Freelancer
+        </p>
+        <p id="entrepreneur"><b>Joven Emprendedor</b></p>
+      </header>
+
+      <section id="about">
+        <h2 id="about-title">Sobre mí</h2>
+        <ul id="about-list">
+          <li>Graduado en Sistemas MicroInformáticos y Redes.</li>
+          <li>Desarrollo Web: HTML5, CSS, XML.</li>
+          <li>Desarrollo Móvil: Android y Juegos Móviles.</li>
+          <li>Especialista en el mundo del Trading a nivel Experto</li>
+        </ul>
+      </section>
+
+      <section id="projects">
+        <h2 id="projects-title">Proyectos Destacados</h2>
+        <ul id="project-list">
+          <li>
+            <img
+              src="https://goo.su/SJk3JCt"
+              alt="Gestión de Música"
+              class="project-img"
+            />
+            <strong>Aplicación de Gestión de Música</strong>: Desarrollada con
+            Kotlin y Java. 
+            <p>Te Permite Gestionar desde un servidor usado con Firebase donde
+            se gestiona listas y canciones, Esta Aplicación no esta finalizada esta en Desarrollo
+            ya que te muestra como se desarrolla una gestion de Músicas con varias listas
+            </p>
+          </li>
+          <li>
+            <img
+            src="https://fv5-2.files.fm/thumb_show.php?i=7znehyuecp&view&v=1&PHPSESSID=0cd97dba448a1e22d86a97f7428be88ebe9c1dc5"              alt="Juego Móvil de Romper Ladrillos"
+              class="project-img"
+            />
+            <strong>Juego Móvil Romper Ladrillos</strong>: Creado para Android con
+            Godot4.3. 
+            <p> El juego "Rompe Ladrillos" es una versión clásica del arcade "Breakout",
+               en el que el jugador controla una paleta para golpear una bola 
+               y destruir bloques en la parte superior de la pantalla. 
+               El objetivo es eliminar todos los ladrillos sin perder la bola 
+               YA QUE SI CAE LA BOLA PIERDES
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="contact">
+        <h2 id="contact-title">Contacto</h2>
+        <p>
+          Email:
+          <a href="mailto:miroslavovdimitrovmartin@gmail.com"
+            >miroslavovdimitrovmartin@gmail.com</a
+          >
+        </p>
+      </section>
+      <div class="social-links">
+        <a
+          href="https://www.linkedin.com/in/martin-miroslavov-dimitrov/"
+          target="_blank"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Linkedin_icon.svg"
+            alt="LinkedIn"
+            class="social-icon"
+          />
+        </a>
+        <a
+          href="https://github.com/martiin-md/martinmd.github.io"
+          target="_blank"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+            alt="GitHub"
+            class="social-icon"
+          />
+        </a>
+        <a
+          href="https://www.instagram.com/martiin.md/?__pwa=1"
+          target="_blank"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+            alt="Instagram"
+            class="social-icon"
+          />
+        </a>
+      </div>
+    </section>
+    </div>
+
+<script src="scripts.js" defer></script>
+  </body>
+</html>
