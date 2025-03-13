@@ -90,98 +90,88 @@
 
       <section id="projects">
         <h2 id="projects-title">Proyectos Destacados</h2>
-        <ul id="project-list">
-          <li>
-            <a
-              href="https://github.com/martiin-md/martinmd.github.io/tree/main/SoundStation"
-              target="_blank"
-            >
-              <img
-                src="./logosSoundStation.jpg"
-                alt="Gestión de Música"
-                class="project-img"
-              />
-              <strong id="project1-title"
-                >Aplicación de Gestión de Música</strong
-              >:
-              <span id="project1-description">
-                Desarrollada con Kotlin y Java. Permite gestionar listas y
-                canciones desde un servidor con Firebase. En desarrollo.
-              </span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/martiin-md/martinmd.github.io/tree/main/Rompe%20Ladrillos"
-              target="_blank"
-            >
-              <img
-                src="./Rompe Ladrillos.png"
-                alt="Juego Móvil de Romper Ladrillos"
-                class="project-img"
-              />
-              <strong id="project2-title">Juego Móvil Romper Ladrillos</strong>:
-              <span id="project2-description">
-                Creado para Android con Godot 4.3. Versión clásica del arcade
-                "Breakout". Controla una paleta y destruye bloques.
-              </span>
-            </a>
-          </li>
+        
+        <div class="carousel-container">
+            <div class="carousel">
+                <!-- Proyecto 1 -->
+                <div class="project-card">
+                  <img src="./iconoCereza.jpg" alt="Gestión de Eventos de Ibiza" class="project-img"/>
+                  <div class="project-details">
+                      <strong id="project1-title">Gestión de Eventos Ibiza</strong>
+                      <p id="project1-description">App para poder Gestionar Eventos, Artistas y Reservas de los Eventos de Ibiza. Hecho con Java y SQLite</p>
+                      <a href="https://github.com/martiin-md/martinmd.github.io/tree/main/ProyectoFinal" target="_blank" class="btn"><i class="fab fa-github"></i></a>
+                  </div>
+              </div>
+    
+                <!-- Proyecto 2 -->
+                <div class="project-card">
+                    <img src="./Rompe Ladrillos.png" alt="Juego Rompe Ladrillos" class="project-img"/>
+                    <div class="project-details">
+                        <strong id="project2-title">Juego Rompe Ladrillos</strong>
+                        <p id="project2-description">Versión clásica del arcade "Breakout". Creado en Godot 4.3.</p>
+                        <a href="https://github.com/martiin-md/martinmd.github.io/tree/main/Rompe%20Ladrillos" target="_blank" class="btn"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+    
 
-        </li>
-        <li>
-          <a
-            href="https://github.com/martiin-md/martinmd.github.io/tree/main/IAchatBotApp_MartinMd"
-            target="_blank"
-          >
-            <img
-              src="./chatBotImg.jpeg"
-              alt="Aplicación de IA-CHAT-BOT"
-              class="project-img"
-            />
-            <strong id="project3-title">IAchatBotApp</strong>:
-            <span id="project3-description">
-              Es una Aplicación donde hablas con la Inteligencia Artificial y
-              te responde a tus necesidades.
-              Desarollada en AppInventor.mit.edu
-            </span>
-          </a>
-        </li>
+                <div class="project-card">
+                  <img src="./logosSoundStation.jpg" alt="Gestión de Música" class="project-img"/>
+                  <div class="project-details">
+                      <strong id="project3-title">Aplicación de Gestión de Música</strong>
+                      <p id="project3-description">Desarrollada con Kotlin y Java. Manejo de listas y canciones.</p>
+                      <a href="https://github.com/martiin-md/martinmd.github.io/tree/main/SoundStation" target="_blank" class="btn"><i class="fab fa-github"></i></a>
+                  </div>
+              </div>
 
-        </ul>
+                <!-- Proyecto 3 -->
+                <div class="project-card">
+                    <img src="./chatBotImg.jpeg" alt="ChatBot IA" class="project-img"/>
+                    <div class="project-details">
+                        <strong id="project4-title">IAchatBotApp</strong>
+                        <p id="project4-description">App de IA que responde preguntas. Creada con AppInventor.</p>
+                        <a href="https://github.com/martiin-md/martinmd.github.io/tree/main/IAchatBotApp_MartinMd" target="_blank" class="btn"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+    
+                <!-- Proyecto 4 -->
+                <div class="project-card">
+                    <img src="./iconoControladorMusica.jpg" alt="Controlador de Música" class="project-img"/>
+                    <div class="project-details">
+                        <strong id="project5-title">Controlador de Música</strong>
+                        <p id="project5-description">Una Aplicación donde te permite basarte en el control de la música (Te sirve de ayuda para futuros proyectos del mundo de la música)</p>
 
-        <!-- Botón para mostrar más proyectos -->
-        <button id="toggle-projects" class="toggle-btn">
-          ▼ Ver más proyectos
-        </button>
-
-        <!-- Sección oculta con más proyectos -->
-        <ul id="more-projects" class="hidden">
-          <li>
-            <a
-              href="https://github.com/martiin-md/martinmd.github.io/tree/main/ProyectoMVC_Martin"
-              target="_blank"
-            >
-              <strong id="project4-title">Base Datos Concesionario</strong>:
-              <span id="project4-description">
-                Se gestiona una base de datos sobre un Concesionario hecha en Java con Maven
-              </span>
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="https://github.com/martiin-md/martinmd.github.io/tree/main/android-media-controller-master"
-              target="_blank"
-            >
-              <strong id="project5-title">Controlador de Música</strong>:
-              <span id="project5-description">
-                Una Aplicación donde te permite basarte en el control de la música (Te sirve de ayuda para futuros proyectos del mundo de la música)
-              </span>
-            </a>
-          </li>
-        </ul>
-      </section>
+                        <a href="https://github.com/martiin-md/martinmd.github.io/tree/main/ProyectoMVC_Martin" target="_blank" class="btn"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+    
+                <!-- Proyecto 5 -->
+                <div class="project-card">
+                    <img src="./logoCoches.jpg" alt="Gestión de Concesionario" class="project-img"/>
+                    <div class="project-details">
+                      <strong id="project6-title">Gestión Concesionario</strong>
+                      <p id="project6-description">Gestión de concesionario con Java y Maven. Te permite gestionar el listado de coches de vendidos con los clientespo
+                        haciendo uso de una base de datos SQL donde puedes añadir personas, unificar coches con personas y ademas observar los propietarios que ha tenido... dicho vehiculo
+                      </p>
+                      <a href="https://github.com/martiin-md/martinmd.github.io/tree/main/android-media-controller-master" target="_blank" class="btn"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Botones de scroll -->
+            <button class="carousel-btn left" onclick="scrollProjects(-1)">&#10094;</button>
+            <button class="carousel-btn right" onclick="scrollProjects(1)">&#10095;</button>
+    
+            <!-- Contenedor de los puntos -->
+            <div class="dots-container">
+                <span class="dot active" onclick="goToProject(0)"></span>
+                <span class="dot" onclick="goToProject(1)"></span>
+                <span class="dot" onclick="goToProject(2)"></span>
+                <span class="dot" onclick="goToProject(3)"></span>
+                <span class="dot" onclick="goToProject(4)"></span>
+            </div>
+        </div>
+    </section>
+    
 
       <!-- Sección de Lenguajes de Programación -->
       <section id="languages">

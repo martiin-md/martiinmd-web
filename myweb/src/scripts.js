@@ -28,21 +28,25 @@ const translations = {
     // Sección Proyectos
     "projects-title": "Proyectos Destacados",
     "toggle-projects": "▼ Ver más proyectos",
-    "project1-title": "Aplicación de Gestión de Música",
+    "project1-title": "Gestión de Eventos Ibiza",
     "project1-description":
-      "Desarrollada con Kotlin y Java. Permite gestionar listas y canciones desde un servidor con Firebase. En desarrollo.",
+      "App para poder Gestionar Eventos, Artistas y Reservas de los Eventos de Ibiza. Hecho con Java y SQLite",
     "project2-title": "Juego Móvil Romper Ladrillos",
     "project2-description":
       "Creado para Android con Godot 4.3. Versión clásica del arcade 'Breakout'. Controla una paleta y destruye bloques.",
-    "project3-title": "IAchatBotApp",
+    "project3-title": "Aplicación de Gestión de Música",
     "project3-description":
-      "Es una Aplicación donde hablas con la Inteligencia Artificial y te responde a tus necesidades. Desarrollada en AppInventor.mit.edu.",
+      "Desarrollada con Kotlin y Java. Esta App te permite el manejo de creación listas y canciones. Su uso de base de datos es de Firebase",
     "project4-title": "IAchatBotApp",
     "project4-description":
       "Es una Aplicación donde hablas con la Inteligencia Artificial y te responde a tus necesidades. Desarrollada en AppInventor.mit.edu.",
     "project5-title": "Controlador de Música",
     "project5-description":
       "Una Aplicación donde te permite basarte en el control de la música (Te sirve de ayuda para futuros proyectos del mundo de la música)",
+
+      "project5-title": "Gestión Concesionario",
+      "project5-description":
+        "Gestión de concesionario con Java y Maven. Te permite gestionar el listado de coches de vendidos con los clientespo haciendo uso de una base de datos SQL donde puedes añadir personas, unificar coches con personas y ademas observar los propietarios que ha tenido... dicho vehiculo",
 
     // Sección Lenguajes de Programación
     "languages-title": "Lenguajes de Programación",
@@ -98,21 +102,24 @@ const translations = {
     // Sección Proyectos
     "projects-title": "Featured Projects",
     "toggle-projects": "▼ See more projects",
-    "project1-title": "Music Management App",
+    "project1-title": "Ibiza Events Management",
     "project1-description":
-      "Developed with Kotlin and Java. Allows managing playlists and songs from a Firebase server. In development.",
+      "An app to manage events, artists, and event reservations in Ibiza. Built with Java and SQLite.",
     "project2-title": "Breakout Mobile Game",
     "project2-description":
       "Created for Android with Godot 4.3. Classic arcade 'Breakout' style. Control a paddle and break blocks.",
-    "project3-title": "IAchatBotApp",
+    "project3-title": "Music Management App",
     "project3-description":
-      "An app where you chat with Artificial Intelligence that responds to your needs. Developed at AppInventor.mit.edu.",
-    "project4-title": "Concessionaire Database",
+      "Developed with Kotlin and Java. This app allows you to create playlists and songs. It uses Firebase as the database.",
+    "project4-title": "IAchatBotApp",
     "project4-description":
-      "A database is managed about a Concessionaire made in Java with Maven.",
+      "An app where you can chat with Artificial Intelligence and get personalized responses. Developed at AppInventor.mit.edu.",
     "project5-title": "Music Controller",
     "project5-description":
-      "An application that allows you to base yourself on the control of music (It helps you for future projects in the world of music)",
+      "An application that helps you manage music controls (Useful for future music-related projects).",
+    "project6-title": "Concessionaire Management",
+    "project6-description":
+      "Concessionaire management system built with Java and Maven. Allows managing sold cars and customers using an SQL database where you can add people, link cars with people, and track vehicle ownership history.",
 
     // Sección Lenguajes de Programación
     "languages-title": "Programming Languages",
@@ -199,21 +206,6 @@ document.addEventListener("DOMContentLoaded", function () {
   changeLanguage(savedLanguage);
 });
 
-// Lógica para mostrar/ocultar más proyectos
-const toggleBtn = document.getElementById("toggle-projects");
-const moreProjects = document.getElementById("more-projects");
-
-if (toggleBtn && moreProjects) {
-  toggleBtn.addEventListener("click", () => {
-    moreProjects.classList.toggle("hidden");
-    if (moreProjects.classList.contains("hidden")) {
-      // Texto al ocultar proyectos (usa el idioma por defecto o actual)
-      toggleBtn.innerText = translations.es["toggle-projects"];
-    } else {
-      toggleBtn.innerText = "▲ Ver menos proyectos";
-    }
-  });
-}
 
 // Función para detectar el scroll y aplicar animación
 document.addEventListener("DOMContentLoaded", function () {
@@ -261,4 +253,46 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", handleScroll);
   handleScroll(); // Para que se active al cargar
+});
+
+
+function scrollProjects(direction) {
+  const carousel = document.querySelector(".carousel");
+  const scrollAmount = 300; // Cantidad de desplazamiento
+
+  if (direction === 1) {
+      carousel.scrollLeft += scrollAmount;
+  } else {
+      carousel.scrollLeft -= scrollAmount;
+  }
+}
+
+// Variables globales
+const carousel = document.querySelector('.carousel');
+const dots = document.querySelectorAll('.dot');
+const projectWidth = 300; // Ancho de cada proyecto (ajusta según tu diseño)
+
+// Función para desplazarse a un proyecto específico
+function goToProject(index) {
+    const offset = index * projectWidth; // Calcula la posición horizontal
+    carousel.scrollTo({
+        left: offset,
+        behavior: 'smooth'
+    });
+
+    // Actualiza el estado de los puntos
+    updateDots(index);
+}
+
+// Función para actualizar los puntos
+function updateDots(activeIndex) {
+    dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === activeIndex);
+    });
+}
+
+// Opcional: Actualizar los puntos automáticamente mientras se desplaza
+carousel.addEventListener('scroll', () => {
+    const index = Math.round(carousel.scrollLeft / projectWidth);
+    updateDots(index);
 });
